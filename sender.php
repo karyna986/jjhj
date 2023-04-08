@@ -22,9 +22,9 @@
 
 
     if(mail($to, $subject, $msg)){
-        echo 'Лист відправлено!';
+        header('location: thank-you.html');
     }
     else {
-        echo 'Лист НЕ відправлено!';
+         echo 'Error';
     }
 ?>
