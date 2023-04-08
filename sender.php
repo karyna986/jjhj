@@ -8,7 +8,7 @@
 	$to = "shavirina.1@gmail.com"; 
 	$date = date ("d.m.Y"); 
 	$time = date ("h:i");
-	$from = $email;
+	$from = trim($_POST['email']);
 	$subject = "Заявка c сайта";
 
 	
@@ -21,7 +21,7 @@
 	
 
 
-    if(mail($to, $subject, $msg, "From: $from ")){
+    if(mail($to, $subject, $msg)){
         echo 'Лист відправлено!';
     }
     else {
